@@ -96,7 +96,7 @@ fun screen1(onNavigate: () -> Unit) {
             Button(
                 onClick = onNavigate,
                 colors = ButtonDefaults.buttonColors(
-                    containerColor = Color(0xFF212529) // Eerie black RGB(33,37,41)
+                    containerColor = Color(0xFF212529)
                 ),
                 modifier = Modifier
                     .width(200.dp)
@@ -128,7 +128,7 @@ fun screen1(onNavigate: () -> Unit) {
             Button(
                 onClick = { showDialog = true },
                 colors = ButtonDefaults.buttonColors(
-                    containerColor = Color(0xFF212529) // Eerie black RGB(33,37,41)
+                    containerColor = Color(0xFF212529)
                 ),
                 modifier = Modifier
                     .width(200.dp)
@@ -198,7 +198,7 @@ fun screen2(onNavigate: () -> Unit) {
     // Round count
     var roundCount by rememberSaveable { mutableStateOf(0) }
 
-    // ADDED: Target score with default value of 100
+    // Target score with default value of 100
     var targetScore by rememberSaveable { mutableStateOf(100) }
     var showTargetDialog by rememberSaveable { mutableStateOf(false) }
     var tempTargetScore by remember { mutableStateOf("100") }
@@ -225,7 +225,7 @@ fun screen2(onNavigate: () -> Unit) {
     var computerRerollCount by rememberSaveable { mutableStateOf(0) }
     var diceKeptByComputer by rememberSaveable { mutableStateOf(listOf<Int>()) }
 
-    // UPDATED: Function to check for a winner using dynamic target score
+    // Function to check for a winner using dynamic target score
     fun checkForWinner() {
         when {
             // Both players reach target score in the same round
@@ -416,7 +416,7 @@ fun screen2(onNavigate: () -> Unit) {
         )
     }
 
-    // ADDED: Target Score Change Dialog
+    // Target Score Change Dialog
     if (showTargetDialog) {
         AlertDialog(
             onDismissRequest = {
@@ -481,14 +481,14 @@ fun screen2(onNavigate: () -> Unit) {
         )
     }
 
-    // Enhanced UI Layout with top spacing
+    // UI Layout with top spacing
     Column(
         modifier = Modifier
             .fillMaxSize()
             .background(Color.White)
             .padding(16.dp)
     ) {
-        // Added free space at the top
+        // Free space at the top
         Spacer(modifier = Modifier.height(48.dp))
 
         // Top Header Row with Target and Round info
